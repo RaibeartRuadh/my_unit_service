@@ -1,0 +1,11 @@
+[Unit]
+Description=start every 30 second after unit start
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=30s
+#### the name of unit we are calling watch.service
+Unit=watch.service
+
+[Install]
+WantedBy=timers.target
