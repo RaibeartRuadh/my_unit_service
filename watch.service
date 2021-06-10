@@ -1,0 +1,13 @@
+[Unit]
+After=network.target
+
+[Service]
+# file, that we use
+EnvironmentFile=/etc/sysconfig/looker
+# directory where script
+WorkingDirectory=/home/vagrant
+ExecStart=/bin/bash '/var/opt/watch.sh'
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
